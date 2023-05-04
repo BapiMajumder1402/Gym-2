@@ -4,6 +4,7 @@ import style from "./Navbar.module.css";
 import { GiHamburgerMenu } from "react-icons/gi";
 
 export function Navbar() {
+  const user = localStorage.getItem("isLogin")
   const [showNavbar, setShowNavbar] = useState(true);
   function logout() {
     localStorage.removeItem("isLogin");
@@ -33,7 +34,7 @@ export function Navbar() {
           Pricing
         </NavLink>
         <button onClick={()=>logout()} className={style.joinbtn}>
-          Logout
+          {user ? "Logout" : "JoinUs"}
         </button>
       </div>
       <button

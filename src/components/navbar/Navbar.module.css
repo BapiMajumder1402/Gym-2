@@ -7,10 +7,10 @@
   display: flex;
   justify-content: space-between;
   align-items: center;
-  padding: 1rem 4rem;
+  padding: 1rem 3rem;
   position:sticky;
   top: 0;
-  width: 100vw;
+ 
   background-color: black;
   color:#fff;
   box-shadow:1px 1px 10px black;

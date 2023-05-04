@@ -4,6 +4,8 @@
 }
 
 .container {
+  position: absolute;
+  z-index: 100;
   display: flex;
   background-color: black;
   padding: 1rem 2rem;
