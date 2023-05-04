@@ -1,17 +1,16 @@
 import { useEffect, useState } from "react";
 import styles from "./Home.module.css";
-import { NavLink, json } from "react-router-dom";
+import { NavLink } from "react-router-dom";
 import { useNavigate } from "react-router-dom";
 
 export function Home() {
-  const history =useNavigate()
+  const navigate = useNavigate();
 
-    const user= JSON.parse(localStorage.getItem("isLogin"))
-    if(!user){
-      history('/Login')
-    }
+  const user = JSON.parse(localStorage.getItem("isLogin"));
+  if (!user) {
+    navigate('/Login');
+  }
 
-  
   const imgArr = [
     {
       url: "https://images3.alphacoders.com/107/thumbbig-1079633.webp",
@@ -31,7 +30,6 @@ export function Home() {
     },
   ];
 
-  // const [image, setImage] = useState(imgArr[0]);
   const [index, setIndex] = useState(0);
 
   useEffect(() => {
@@ -47,10 +45,8 @@ export function Home() {
     <div className={styles.imgSlider}>
       <img className={styles.img} src={imgArr[index].url} alt="gym" />
       <div className={styles.imgText}>
-        {/* <div> */}
         <h2>{imgArr[index].text}</h2>
-       <NavLink to="/login"> <button>Join with us</button></NavLink>
-        {/* </div> */}
+        <NavLink to="/login"><button>Join with us</button></NavLink>
       </div>
     </div>
   );

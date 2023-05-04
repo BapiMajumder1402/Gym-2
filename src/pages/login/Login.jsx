@@ -1,12 +1,11 @@
 import React, { useState } from "react";
 import Button from "react-bootstrap/Button";
 import Form from "react-bootstrap/Form";
-import style from "./Login.module.css";
 import Swal from "sweetalert2";
-import { NavLink, useNavigate } from "react-router-dom";
+import { NavLink, useHistory } from "react-router-dom";
 
 export const Login = () => {
-  const history = useNavigate();
+  const history = useHistory();
 
   const [inputValue, setInputValue] = useState({
     email: "",
@@ -24,6 +23,7 @@ export const Login = () => {
       };
     });
   };
+
   const handleSubmitData = (e) => {
     e.preventDefault();
 
@@ -31,13 +31,12 @@ export const Login = () => {
     console.log(getUserArr);
 
     const { email, password } = inputValue;
-    if (email == "") {
+
+    if (email === "") {
       Swal.fire("E-mail field is required");
-    } else if (!email.includes("@")) {
-      Swal.fire("Please enter valid email address");
-    } else if (!email.includes(".com")) {
-      Swal.fire("Please enter valid email address");
-    } else if (password == "") {
+    } else if (!email.includes("@") || !email.endsWith(".com")) {
+      Swal.fire("Please enter a valid email address");
+    } else if (password === "") {
       Swal.fire("Password field is required");
     } else if (password.length < 5) {
       Swal.fire("Password size must be greater than Five");
@@ -48,10 +47,10 @@ export const Login = () => {
           (item, ind) => item.email === email && item.password === password
         );
         if (user) {
-          Swal.fire("Login Successfull", "You clicked the button!", "success");
+          Swal.fire("Login Successful", "You clicked the button!", "success");
 
           localStorage.setItem("isLogin", JSON.stringify("true"));
-          history("/");
+          history.push("/");
         } else {
           Swal.fire("Login Failed");
         }
@@ -59,9 +58,10 @@ export const Login = () => {
         Swal.fire("Login Failed");
       }
 
-      localStorage.setItem("Users_login", JSON.stringify(getUserArr));
+      localStorage.setItem("Users_login", JSON.stringify(userArr));
     }
   };
+
 
   return (
     <div className={style.container}>
