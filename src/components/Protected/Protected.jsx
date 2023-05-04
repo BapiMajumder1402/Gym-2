@@ -8,7 +8,7 @@ export default function Protected(props) {
     if (!login) {
       navigate("/Login");
     }
-  }, [props]);
+  }, [login]);
 
   return (
     <div>
