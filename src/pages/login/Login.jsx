@@ -57,7 +57,7 @@ const [gymData, setGymData]=useState([])
                     'success',
                 )
                 
-                localStorage.setItem("isLogin" , true);
+                localStorage.setItem("isLogin" , JSON.stringify(true));
                 history("/")
             }else{
                Swal.fire("Login Failed")
@@ -67,7 +67,7 @@ const [gymData, setGymData]=useState([])
           
        }
 
-         localStorage.setItem("Users_login", JSON.stringify(userArr))
+         localStorage.setItem("Users_login", JSON.stringify(getUserArr))
       }   
       
   }
