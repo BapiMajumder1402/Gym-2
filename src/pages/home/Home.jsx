@@ -1,8 +1,17 @@
 import { useEffect, useState } from "react";
 import styles from "./Home.module.css";
-import { NavLink } from "react-router-dom";
+import { NavLink, json } from "react-router-dom";
+import { useNavigate } from "react-router-dom";
 
 export function Home() {
+  const history =useNavigate()
+
+    const user= JSON.parse(localStorage.getItem("gymUsers"))
+    if(user.isLogin==false){
+      history('/Login')
+    }
+
+  
   const imgArr = [
     {
       url: "https://images3.alphacoders.com/107/thumbbig-1079633.webp",

@@ -18,10 +18,10 @@
    overflow-x: scroll;
    scroll-behavior: smooth;
 }
-/* 
+
 .scrollerCard::-webkit-scrollbar{
     display: none;
-} */
+}
 
 .card img{
    width: 100%;

@@ -33,6 +33,7 @@
 .item:hover{
     color:red;
     cursor: pointer;
+    border-bottom: blue;
 }
 
 img{
@@ -43,15 +44,17 @@ a {
   color: #fff;
 }
 
-.joinbtn {
-  background-color:maroon;
+.joinbtn{
+  background-color:red;
   border-radius: 0.5rem;
   padding: 0.6rem 1rem;
   color:#fff;
   text-decoration: none;
+  font-weight: 600;
 }
 .joinbtn:hover{
-  color:white;
+  color:blue;
+  background-color: #fff;
 }
 
 .closebtn {

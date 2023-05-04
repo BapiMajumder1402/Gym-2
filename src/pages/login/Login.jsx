@@ -56,6 +56,8 @@ const [gymData, setGymData]=useState([])
                 'You clicked the button!',
                     'success',
                 )
+                user.islogin = true;
+                localStorage.setItem("isLogin" , true);
                 history("/")
             }else{
                Swal.fire("Login Failed")

@@ -5,6 +5,9 @@ import { GiHamburgerMenu } from "react-icons/gi";
 
 export function Navbar() {
   const [showNavbar, setShowNavbar] = useState(true);
+  function logout() {
+    localStorage.removeItem("isLogin");
+  }
   return (
     <div className={style.container}>
       <NavLink to="/">
@@ -29,9 +32,9 @@ export function Navbar() {
         <NavLink to="/pricing" className={style.item}>
           Pricing
         </NavLink>
-        <NavLink to="/login" className={style.joinbtn}>
-          Join us
-        </NavLink>
+        <button onClick={()=>logout()} className={style.joinbtn}>
+          Logout
+        </button>
       </div>
       <button
         onClick={() => setShowNavbar(!showNavbar)}
