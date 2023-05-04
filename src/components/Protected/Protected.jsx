@@ -3,13 +3,11 @@ import { useNavigate } from "react-router-dom";
 
 export default function Protected(props) {
   const navigate = useNavigate();
-  let login = localStorage.getItem("isLogin");
-  useEffect(() => {
-    if (!login) {
-      navigate("/Login");
-    }
-  }, [login]);
-
+  let login = JSON.parse(localStorage.getItem("isLogin"));
+if (!login) {
+  navigate("/Login");
+}
+  
   return (
     <div>
       <props.Cmp />

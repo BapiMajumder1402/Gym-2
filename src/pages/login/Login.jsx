@@ -2,10 +2,11 @@ import React, { useState } from "react";
 import Button from "react-bootstrap/Button";
 import Form from "react-bootstrap/Form";
 import Swal from "sweetalert2";
-import { NavLink, useHistory } from "react-router-dom";
+import style from './Login.module.css';
+import { NavLink, useNavigate } from "react-router-dom";
 
 export const Login = () => {
-  const history = useHistory();
+  const navigate = useNavigate();
 
   const [inputValue, setInputValue] = useState({
     email: "",
@@ -50,7 +51,7 @@ export const Login = () => {
           Swal.fire("Login Successful", "You clicked the button!", "success");
 
           localStorage.setItem("isLogin", JSON.stringify("true"));
-          history.push("/");
+          navigate("/");
         } else {
           Swal.fire("Login Failed");
         }
@@ -58,7 +59,7 @@ export const Login = () => {
         Swal.fire("Login Failed");
       }
 
-      localStorage.setItem("Users_login", JSON.stringify(userArr));
+      localStorage.setItem("Users_login", JSON.stringify(getUserArr));
     }
   };
 
