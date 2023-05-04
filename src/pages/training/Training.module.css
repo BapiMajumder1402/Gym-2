@@ -1,0 +1,104 @@
+.scrollDiv {
+  display: flex;
+  flex-direction: column;
+  width: 99vw;
+  background-color: black;
+}
+
+.scrollDiv::-webkit-scrollbar {
+  display: none;
+}
+
+.profiles {
+  margin: 1rem;
+  display: flex;
+  align-items: center;
+  flex-wrap: wrap;
+  background-color: black;
+  margin: auto;
+  /* padding: 1rem 7rem 1rem 7rem; */
+  padding-left: 5rem;
+}
+
+.trainerDiv {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  margin: 4rem 0 5rem 0;
+}
+
+.trainerBtn {
+  background-color: black;
+  border: 1px solid;
+  color: white;
+  padding: 1rem;
+  font-size: 0.7rem;
+  font-family: Cambria, Cochin, Georgia, Times, "Times New Roman", serif;
+}
+
+.meetTeam {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  background-color: black;
+}
+
+.teamHead {
+  color: white;
+  font-family: monospace;
+  font-size: 1.3rem;
+  margin-top: 5rem;
+}
+
+.Line {
+  border: 0.1rem solid green;
+  width: 2rem;
+  margin-bottom: 1.3rem;
+}
+
+.contentMeet {
+  font-size: 1rem;
+  text-align: center;
+  color: white;
+  margin-bottom: 3rem;
+  font-family: "Segoe UI", Tahoma, Geneva, Verdana, sans-serif;
+}
+
+.card {
+  display: flex;
+  flex-direction: column;
+  background-color: black;
+  align-items: center;
+  justify-content: center;
+  width: 18rem;
+  margin: 0.2rem;
+}
+
+.imgTrainer {
+  width: 17.3rem;
+  height: 17.1rem;
+}
+
+h4 {
+  margin: 0.3rem 0 0.3rem 0;
+  color: white;
+  font-weight: 900;
+  font-family: "Franklin Gothic Medium", "Arial Narrow", Arial, sans-serif;
+  font-size: 1.4rem;
+}
+
+.coach {
+  color: white;
+  font-size: 0.7rem;
+  font-family: Verdana, Geneva, Tahoma, sans-serif;
+  margin-bottom: 0.4rem;
+}
+
+@media screen and (max-width:390px) {
+
+  .profiles{
+    padding-left:3rem;
+  }
+  
+}

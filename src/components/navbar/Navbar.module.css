@@ -1,0 +1,98 @@
+* {
+  margin: 0;
+  padding: 0;
+}
+
+.container {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 1rem 4rem;
+  position:sticky;
+  top: 0;
+  width: 100vw;
+  background-color: black;
+  color:#fff;
+  box-shadow:1px 1px 10px black;
+  z-index: 999;
+}
+
+.navlist {
+  display: flex;
+  gap: 1.2rem;
+  align-items: center;
+  
+}
+
+.item{
+  font-size: 20px;
+  text-decoration: none;
+  
+}
+
+.item:hover{
+    color:red;
+    cursor: pointer;
+}
+
+img{
+    width: 70px;
+}
+
+a {
+  color: #fff;
+}
+
+.joinbtn {
+  background-color:maroon;
+  border-radius: 0.5rem;
+  padding: 0.6rem 1rem;
+  color:#fff;
+  text-decoration: none;
+}
+.joinbtn:hover{
+  color:white;
+}
+
+.closebtn {
+  display: none;
+}
+
+.mobileView {
+ display: flex;
+ flex-direction: column;
+ align-items: center;
+}
+.mobileView .item{
+    display: block;
+    padding:.5rem 1rem
+}
+.mobileView .joinbtn{
+    display: block;
+}
+
+.logo{
+  display: flex;
+  align-items: center;
+}
+
+@media screen and (max-width: 768px) {
+  .item {
+    display: none;
+  }
+  .joinbtn{
+    display:none;
+  }
+
+  .closebtn {
+    display: block;
+    background-color: red;
+    position: fixed ;
+    top: 20px;
+    padding:0.3rem;
+    right:30px;
+    border: none;
+    color: white;
+  }
+}
+

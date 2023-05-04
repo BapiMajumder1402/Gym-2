@@ -1,0 +1,40 @@
+* {
+  margin: 0;
+  padding: 0;
+}
+.imgSlider {
+  width: 100%;
+  height: 100vh;
+ 
+}
+.img {
+  width: 100%;
+  height: 90vh;
+  filter:brightness(0.6) ;
+}
+
+.imgText {
+  position: absolute;
+  bottom: 10rem;
+  /* left: 0; */
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 100vw;
+  padding: 10px;
+  color: white;
+  font-size: 20px;
+  text-align: center;
+  font-family: "Franklin Gothic Medium", "Arial Narrow", Arial, sans-serif;
+  flex-direction: column;
+  gap:20px;
+  /* z-index: 1; */
+}
+
+.imgText button{
+    background-color: maroon;
+    padding:0.7rem 1rem;
+    border-radius: 0.5rem;
+    color:white;
+    border:none;
+}

@@ -1,0 +1,27 @@
+.container{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    background-image: url("https://images.pexels.com/photos/1552242/pexels-photo-1552242.jpeg?cs=srgb&dl=pexels-leon-ardho-1552242.jpg&fm=jpg");
+    background-size: cover;
+    background-repeat: no-repeat;
+    height: 90vh;
+    width:100vw;
+}
+
+form{
+    padding: 2rem;
+    border-radius:1rem;
+    box-shadow: 1px 1px 20px grey;
+
+}
+
+.para{
+    color: white;
+    margin-top: 1rem;
+}
+
+
+
+
